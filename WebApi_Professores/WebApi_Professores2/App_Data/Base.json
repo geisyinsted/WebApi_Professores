@@ -1,0 +1,44 @@
+﻿[
+  {
+    "Mid": 1,
+    "Mnome": "Miguel",
+    "Mcredencial": "00000000001",
+    "Mdisciplina": "artes",
+    "Mhorario": "matutino"
+  },
+  {
+    "Mid": 2,
+    "Mnome": "Marcelo",
+    "Mcredencial": "00000000002",
+    "Mdisciplina": "matematica",
+    "Mhorario": "vespertino"
+  },
+  {
+    "Mid": 3,
+    "Mnome": "Manuel",
+    "Mcredencial": "00000000003",
+    "Mdisciplina": "portugues",
+    "Mhorario": "noturno"
+  },
+  {
+    "Mid": 4,
+    "Mnome": "Merida",
+    "Mcredencial": "00000000004",
+    "Mdisciplina": "geografia",
+    "Mhorario": "matutino"
+  },
+  {
+    "Mid": 5,
+    "Mnome": "Marcela",
+    "Mcredencial": "00000000005",
+    "Mdisciplina": "artes",
+    "Mhorario": "vespertino"
+  },
+  {
+    "Mid": 6,
+    "Mnome": "Maicon",
+    "Mcredencial": "00000000006",
+    "Mdisciplina": "historia",
+    "Mhorario": "noturno"
+  }
+]
