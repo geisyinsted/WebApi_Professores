@@ -8,23 +8,24 @@ using WebApi_Professores2.Models;
 
 namespace WebApi_Professores2.Controllers
 {
+    
     public class ProfessorController : ApiController
     {
-        // GET: api/Professor
+        // GET: api/Pessoa
         public IEnumerable<Professores> Get()
         {
             Professores professor = new Professores();
             return professor.ListaProfessores();
         }
 
-        // GET: api/Professor/5
+        // GET: api/Pessoa/5
         public Professores Get(int id)
         {
             Professores professor = new Professores();
-            return professor.ListaProfessores().Where(x => x.Mid == id).FirstOrDefault();
+            return professor.ListaProfessores().Where(x => x.Id == id).FirstOrDefault();
         }
 
-        // POST: api/Professor
+        // POST: api/Pessoa
         public List<Professores> Post(Professores professor)
         {
             Professores _professor = new Professores();
@@ -32,7 +33,7 @@ namespace WebApi_Professores2.Controllers
             return _professor.ListaProfessores();
         }
 
-        // PUT: api/Professor/5
+        // PUT: api/Pessoa/5
         public List<Professores> Put(int id, Professores professor)
         {
             Professores _professor = new Professores();
@@ -44,10 +45,11 @@ namespace WebApi_Professores2.Controllers
         // DELETE: api/Pessoa/5
         public void Delete(int id)
         {
-            Professores _pessoa = new Professores();
-            _pessoa.Deletar(id);
+            Professores _professor = new Professores();
+            _professor.Deletar(id);
 
 
         }
+
     }
 }

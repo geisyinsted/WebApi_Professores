@@ -8,17 +8,80 @@ using System.Web.Hosting;
 
 namespace WebApi_Professores2.Models
 {
-    public class Professores
+    public interface IVerificaProf
     {
-        public int Mid { get; set; }
+        string VerificaId(Professores p);
+        string VerificaNome(Professores p);
+        string VerificaCredencial(Professores p);
+        string VerificaDisciplina(Professores p);
+        string VerificaHorario(Professores p);
+    }
+    public class Professores : IVerificaProf
+    {
+        
+        public int Id { get; set; }
 
-        public string Mnome { get; set; }
+        public string Nome { get; set; }
 
-        public string Mcredencial { get; set; }
+        public string Credencial { get; set; }
 
-        public string Mdisciplina { get; set; }
+        public string Disciplina { get; set; }
 
-        public string Mhorario { get; set; }
+        public string Horario { get; set; }
+
+        public string VerificaId(Professores p)
+        {
+            if (p.Id < 1)
+            {
+                return "Erro!! ID Inexistente";
+            }
+            else
+                return "";
+
+        }
+
+        public string VerificaNome(Professores p)
+        {
+            if (p.Nome == null)
+            {
+                return "Erro!! Nome Inexistente";
+            }
+            else
+                return "";
+
+        }
+
+        public string VerificaCredencial(Professores p)
+        {
+            if (p.Credencial == null)
+            {
+                return "Erro!! Credencial Inexistente";
+            }
+            else
+                return "";
+
+        }
+
+        public string VerificaDisciplina(Professores p)
+        {
+            if (p.Disciplina == null)
+            {
+                return "Erro!! Disciplina Inexistente";
+            }
+            else
+                return "";
+
+        }
+        public string VerificaHorario(Professores p)
+        {
+            if (p.Horario == "matutino" || p.Horario == "vespertino" || p.Horario == "noturno")
+            {
+                return "";
+            }
+            else
+                return "Erro!! Horário Inexistente";
+
+        }
 
 
         public List<Professores> ListaProfessores()
@@ -40,8 +103,8 @@ namespace WebApi_Professores2.Models
         public Professores Inserir(Professores Professor)
         {
             var ListaProfessores = this.ListaProfessores();
-            var maxId = ListaProfessores.Max(professor => professor.Mid);
-            Professor.Mid = maxId + 1;
+            var maxId = ListaProfessores.Max(professor => professor.Id);
+            Professor.Id = maxId + 1;
             ListaProfessores.Add(Professor);
             ReescreverArquivo(ListaProfessores);
             return Professor;
@@ -50,10 +113,10 @@ namespace WebApi_Professores2.Models
         public Professores Atualizar(int Mid, Professores Professor)
         {
             var ListaProfessores = this.ListaProfessores();
-            var itemIndex = ListaProfessores.FindIndex(p => p.Mid == Mid);
+            var itemIndex = ListaProfessores.FindIndex(p => p.Id == Mid);
             if (itemIndex >= 0)
             {
-                Professor.Mid = Mid;
+                Professor.Id = Mid;
                 ListaProfessores[itemIndex] = Professor;
 
             }
@@ -68,7 +131,7 @@ namespace WebApi_Professores2.Models
         public bool Deletar(int id)
         {
             var ListaProfessores = this.ListaProfessores();
-            var itemIndex = ListaProfessores.FindIndex(p => p.Mid == id);
+            var itemIndex = ListaProfessores.FindIndex(p => p.Id == id);
             if (itemIndex >= 0)
             {
                 ListaProfessores.RemoveAt(itemIndex);
