@@ -4,41 +4,47 @@
     "Mnome": "Miguel",
     "Mcredencial": "00000000001",
     "Mdisciplina": "artes",
-    "Mhorario": "matutino"
+    "Mhorario": "matutino",
+    "Mtitulacao": "Pós Graduado"
   },
   {
     "Mid": 2,
     "Mnome": "Marcelo",
     "Mcredencial": "00000000002",
     "Mdisciplina": "matematica",
-    "Mhorario": "vespertino"
+    "Mhorario": "vespertino",
+    "Mtitulacao": "Mestre"
   },
   {
     "Mid": 3,
     "Mnome": "Manuel",
     "Mcredencial": "00000000003",
     "Mdisciplina": "portugues",
-    "Mhorario": "noturno"
+    "Mhorario": "noturno",
+    "Mtitulacao": "Doutor"
   },
   {
     "Mid": 4,
     "Mnome": "Merida",
     "Mcredencial": "00000000004",
     "Mdisciplina": "geografia",
-    "Mhorario": "matutino"
+    "Mhorario": "matutino",
+    "Mtitulacao": "Pós Graduado"
   },
   {
     "Mid": 5,
     "Mnome": "Marcela",
     "Mcredencial": "00000000005",
     "Mdisciplina": "artes",
-    "Mhorario": "vespertino"
+    "Mhorario": "vespertino",
+    "Mtitulacao": "Mestre"
   },
   {
     "Mid": 6,
     "Mnome": "Maicon",
     "Mcredencial": "00000000006",
     "Mdisciplina": "historia",
-    "Mhorario": "noturno"
+    "Mhorario": "noturno",
+    "Mtitulacao": "Doutor"
   }
 ]
