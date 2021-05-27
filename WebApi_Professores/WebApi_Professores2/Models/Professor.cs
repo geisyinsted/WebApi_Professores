@@ -18,7 +18,15 @@ namespace WebApi_Professores2.Models
     }
     public class Professores : IVerificaProf
     {
-        
+        public Professores(string titulacao)
+        {
+            Titulacao = titulacao;
+        }
+
+        public Professores()
+        {
+        }
+
         public int Id { get; set; }
 
         public string Nome { get; set; }
@@ -28,6 +36,8 @@ namespace WebApi_Professores2.Models
         public string Disciplina { get; set; }
 
         public string Horario { get; set; }
+
+        public string Titulacao { get; set; }
 
         public string VerificaId(Professores p)
         {
@@ -80,6 +90,16 @@ namespace WebApi_Professores2.Models
             }
             else
                 return "Erro!! Horário Inexistente";
+
+        }
+        public string VerificaTitulacao(Professores p)
+        {
+            if (p.Titulacao == "pós graduado" || p.Horario == "mestre" || p.Horario == "doutor")
+            {
+                return "";
+            }
+            else
+                return "Erro!! Titulação Inexistente";
 
         }
 
