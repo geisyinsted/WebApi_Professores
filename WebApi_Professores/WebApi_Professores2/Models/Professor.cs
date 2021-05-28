@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -15,6 +16,8 @@ namespace WebApi_Professores2.Models
         string VerificaCredencial(Professores p);
         string VerificaDisciplina(Professores p);
         string VerificaHorario(Professores p);
+        string VerificaTitulacao(Professores p);
+        
     }
     public class Professores : IVerificaProf
     {
@@ -94,7 +97,7 @@ namespace WebApi_Professores2.Models
         }
         public string VerificaTitulacao(Professores p)
         {
-            if (p.Titulacao == "pós graduado" || p.Horario == "mestre" || p.Horario == "doutor")
+            if (p.Titulacao == "pós graduado" || p.Titulacao == "mestre" || p.Titulacao == "doutor")
             {
                 return "";
             }
@@ -102,6 +105,7 @@ namespace WebApi_Professores2.Models
                 return "Erro!! Titulação Inexistente";
 
         }
+
 
 
         public List<Professores> ListaProfessores()
