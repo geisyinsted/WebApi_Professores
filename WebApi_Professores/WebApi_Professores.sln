@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi_Professores2", "WebApi_Professores2\WebApi_Professores2.csproj", "{6D722D92-B9A7-4EDB-BBE1-46D665324EBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfessorTest", "ProfessorTest\ProfessorTest.csproj", "{243960D7-0DA8-4B1D-AB1F-99A3B4AD8018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProfessorTest", "ProfessorTest\ProfessorTest.csproj", "{243960D7-0DA8-4B1D-AB1F-99A3B4AD8018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfessorDataDrivenTest", "ProfessorDataDrivenTest\ProfessorDataDrivenTest.csproj", "{E4A8A4D8-D4B0-46E3-AF4A-558AD83622E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{243960D7-0DA8-4B1D-AB1F-99A3B4AD8018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{243960D7-0DA8-4B1D-AB1F-99A3B4AD8018}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{243960D7-0DA8-4B1D-AB1F-99A3B4AD8018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A8A4D8-D4B0-46E3-AF4A-558AD83622E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A8A4D8-D4B0-46E3-AF4A-558AD83622E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A8A4D8-D4B0-46E3-AF4A-558AD83622E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A8A4D8-D4B0-46E3-AF4A-558AD83622E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -99,5 +99,23 @@ namespace ProfessorTest
             //Assert
             Assert.Equal(horario, horarioEsperado);
         }
+        [Fact]
+        public void VerificaTitulacaoTeste()
+        {
+            Professores Larissa = new Professores();
+            Larissa.Titulacao = "mestre";
+
+            Mock<IVerificaProf> mock = new Mock<IVerificaProf>();
+            mock.Setup(m => m.VerificaTitulacao(Larissa)).Returns("");
+
+            Professores verifica = new Professores();
+
+            //Act
+            var titulacaoEsperado = mock.Object.VerificaTitulacao(Larissa);
+            var titulacao = verifica.VerificaTitulacao(Larissa);
+
+            //Assert
+            Assert.Equal(titulacao, titulacaoEsperado);
+        }
     }
 }
